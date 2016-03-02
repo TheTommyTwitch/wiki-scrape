@@ -1,0 +1,26 @@
+{
+  "name": "wiki-scrape",
+  "version": "1.0.0",
+  "description": "An easy way to get data from wikipedia in Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheTommyTwitch/wiki-scrape.git"
+  },
+  "keywords": [
+    "wikipedia",
+    "scrape",
+    "scraper",
+    "data",
+    "wiki"
+  ],
+  "author": "Thomas Asadurian <Tasadurian@gmail.com> (http://thetommytwitch.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheTommyTwitch/wiki-scrape/issues"
+  },
+  "homepage": "https://github.com/TheTommyTwitch/wiki-scrape#readme"
+}

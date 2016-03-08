@@ -31,3 +31,5 @@ var Wiki = (function() {
   return Wiki;
 
 })();
+
+module.exports = Wiki;

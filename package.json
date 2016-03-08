@@ -25,6 +25,7 @@
   "homepage": "https://github.com/TheTommyTwitch/wiki-scrape#readme",
   "dependencies": {
     "chai": "^3.5.0",
+    "chai-things": "^0.2.0",
     "cheerio": "^0.20.0",
     "mocha": "^2.4.5",
     "request-promise": "^2.0.1"

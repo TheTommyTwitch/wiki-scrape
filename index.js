@@ -19,7 +19,13 @@ var Wiki = (function() {
 
   Wiki.prototype.scrape = function(url) {
     var body = getBody(url);
+    var data = [];
 
+    $(body).find('#mw-content-text').children('p').each(function(i, elem) {
+      data[i] = $(this).text();
+    });
+
+    return data;
   };
 
   return Wiki;

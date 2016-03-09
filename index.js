@@ -1,4 +1,4 @@
-var $ = require('cheerio');
+var cheerio = require('cheerio');
 var rp = require('request-promise');
 
 getBody = function(url) {
@@ -18,14 +18,28 @@ var Wiki = (function() {
   function Wiki() {}
 
   Wiki.prototype.scrape = function(url) {
-    var body = getBody(url);
-    var data = [];
+    var options = {
+      uri: url,
+      transform: function(body) {
+        return cheerio.load(body);
+      }
+    };
 
-    $(body).find('#mw-content-text').children('p').each(function(i, elem) {
-      data[i] = $(this).text();
-    });
+    rp(options)
+      .then(function($) {
+        var array = [];
 
-    return data;
+        $('#mw-content-text').children().each(function(i, elem) {
+          array[i] = $(this).text();
+        });
+
+        array.join(', ');
+        console.log(array);
+        return array;
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
   };
 
   return Wiki;
